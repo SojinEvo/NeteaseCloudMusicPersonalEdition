@@ -454,7 +454,7 @@ export default {
         ) {
           // console.log("ele", ele.time);
           // console.log("cur", this.$refs.audio.currentTime);
-
+          this.$refs.lyricBox.scrollTop = i * 28;
           try {
             this.$refs.lyricLi[i].style.color = "lightgreen";
             this.$refs.lyricLi[i].style.fontSize = "16px";
@@ -462,10 +462,10 @@ export default {
             this.$refs.lyricLi[i - 1].style.fontSize = "12px";
           } catch {}
         }
-        console.log(this.$refs.lyricLi[i].offsetTop)
-        if (this.$refs.lyricLi[i].style.top == 266.8) {
-          this.$refs.lyricBox.scrollTop = i * 28;
-        }
+        console.log(this.$refs.lyricLi[i].offsetTop);
+        // if (this.$refs.lyricLi[i].style.top == 266.8) {
+
+        // }
       }
       if (!this.musicTime) return "";
       // 当前进度条宽度（当前时长/总时长 *总进度条宽度）
@@ -799,7 +799,6 @@ span {
   font-size: 12px;
   height: 22px;
   transition: all 0.6s;
- 
 }
 .lyricContainer .musicLists {
   width: 200px;
